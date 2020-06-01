@@ -119,7 +119,7 @@ class Cache
                 else
                     stat.hit++;
                 uint8_t byte = line->datas[(byte_offset + i) % line_size];
-                data |= byte <<= (i * 8);
+                data |= (byte << (i * 8));
             }
             return data;
         }
