@@ -96,6 +96,7 @@ class Cache
             auto line = CacheLine(line_size);
             line.valid = true;
             line.tag = tag;
+            line.datas = datas;
             return sets[idx].allocate_line(line);
         }
 
